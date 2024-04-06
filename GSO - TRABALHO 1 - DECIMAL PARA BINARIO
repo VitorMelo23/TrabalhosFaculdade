@@ -1,0 +1,63 @@
+/************************************************************ 
+
+Fatec Franco da Rocha 
+
+Gestão de Sistemas Operacionais 
+
+Grupo: 3 
+
+Brenda dos Santos Vitoria Prodossimo  
+
+Kaillan Lopes de Souza  
+
+Regina Santana Lima  
+
+Thiago Sales de Oliveira  
+
+Vitor de Melo Souza  
+
+************************************************************/ 
+
+#include <stdio.h>  
+
+int main()  
+
+{  
+
+    int decimal, resto, binario = 0, digito = 1, num;  
+
+  
+
+    printf("Digite um valor em decimal para conversao em binario: ");  
+
+    scanf("%d", &decimal); 
+
+     
+
+    num = decimal; 
+
+     
+
+    while (decimal != 0)  
+
+{  
+
+        resto = decimal % 2;  
+
+        binario = binario + (resto * digito);  
+
+        digito = digito * 10;  
+
+        decimal = decimal / 2;  
+
+}  
+
+  
+
+printf("O número %d em binario e: %d", num, binario);  
+
+   
+
+    return 0;  
+
+} 
